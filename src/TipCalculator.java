@@ -7,7 +7,7 @@ public class TipCalculator {
         System.out.println("Welcome to the Tip Calculator!"); //welcomes user
         System.out.print("How many people are in your group? "); //user inputs number
         int people = scan.nextInt();
-        System.out.print("What’s the tip percentage? (0-100): "); //enter any number without percentage
+        System.out.print("What’s the Tip percentage? (0-100): "); //enter any number without percentage
         int percent = scan.nextInt(); //user enters the percentage for tips
         double total = 0;
         double num = 0;
@@ -22,19 +22,19 @@ public class TipCalculator {
         String formattedNum = formatter.format(total);
         System.out.println("Total Bill Before Tip : " + formattedNum );
         System.out.println("Tip Percentage : " + percent+"%"); //whole number inputted and not the percentage inputted with the current whole.
-        double totaltip = total * percent / 100; //divided by 100 because the percent entered is whole number(20) rather than the percent added like 1.20.
-        String formattedtotaltip = formatter.format(totaltip);
-        System.out.println("Total Tip : "+formattedtotaltip);
-        double totalbill = total + totaltip;
-        String formattedtotalbill = formatter.format(totalbill);
-        System.out.println("Total Bill With Tip: "+ formattedtotalbill);
-        double costbeforetip= total/people;
-        String formattedpeople = formatter.format(costbeforetip);
-        System.out.println("Per Person Cost Before Tip: " +formattedpeople);
-        double TipPerPerson = totaltip/people; //tip paid per person not including the total without tips
+        double totalTip = total * percent / 100; //divided by 100 because the percent entered is whole number(20) rather than the percent added like 1.20.
+        String formattedTotalTip = formatter.format(totalTip);
+        System.out.println("Total Tip : "+formattedTotalTip);
+        double totalBill = total + totalTip;
+        String formattedTotalBill = formatter.format(totalBill);
+        System.out.println("Total Bill With Tip: "+ formattedTotalBill);
+        double costBeforeTip= total/people;
+        String formattedPeople = formatter.format(costBeforeTip);
+        System.out.println("Per Person Cost Before Tip: " +formattedPeople);
+        double TipPerPerson = totalTip/people; //tip paid per person not including the total without tips
         String formattedTPP = formatter.format(TipPerPerson);
         System.out.println("Tip Per Person: " + formattedTPP);
-        double TotalCostPerPerson = TipPerPerson+costbeforetip;
+        double TotalCostPerPerson = TipPerPerson+costBeforeTip;
         String formattedTCPP = formatter.format(TotalCostPerPerson);
         System.out.println("Total Cost Per Person: " + formattedTCPP); //end value for each person
     }
